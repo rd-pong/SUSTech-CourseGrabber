@@ -7,3 +7,5 @@ Everything you need to configure is in the Configuration part:
         ![The number in the circle is the course ID.](https://github.com/readypeng/SUSTech-CourseGrabber/blob/master/Cache_40ed8ebab5bc3341..jpg)
   2. userId & password: fill in with your student account info (No storage of private info at all!)
   3. At present, there is no need to change jwxtCASUrl and jrxkUrl2,which are listed just in case of future changes
+
+Have fun course selection!
