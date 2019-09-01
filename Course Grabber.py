@@ -4,12 +4,12 @@ import time
 import requests
 
 # 参数
-jwxtCASUrl = 'https://cas.sustc.edu.cn/cas/login?service=http%3A%2F%2Fjwxt.sustc.edu.cn%2Fjsxsd%2F'
-jrxkUrl2 = 'http://jwxt.sustc.edu.cn/jsxsd/xsxk/xsxk_index?jx0502zbid=3A1BF4389B934C97892839429A1528F5'
+jwxtCASUrl = 'https://cas.sustech.edu.cn/cas/login?service=http%3A%2F%2Fjwxt.sustech.edu.cn%2Fjsxsd%2F'
+jrxkUrl2 = 'http://jwxt.sustech.edu.cn/jsxsd/xsxk/xsxk_index?jx0502zbid=3E90176099AB4B3DA057E81E0FBD5181'
 
 class_id = [
-    ["201820192000615", "艺术与科学大讲堂[中文班]"],
-    ["201820191000712", "形势与政策[中文6班]"]
+    "201920201000314", "离散数学",
+    "201920201000314", "离散数学",
 ]
 
 userId = ''  # fill with 8 digits student ID number
@@ -30,7 +30,7 @@ r = session.get(jrxkUrl2)
 
 while True:
     for i in class_id:
-        res = session.get(
-            "http://jwxt.sustc.edu.cn/jsxsd/xsxkkc/fawxkOper?jx0404id=" + i[0] + "&xkzy=&trjf=")
-        print(i[1], res.json()["message"])
+       res = session.get(
+                "http://jwxt.sustech.edu.cn/jsxsd/xsxkkc/knjxkOper?jx0404id=" + class_id[i] + "&xkzy=&trjf=")
+            print(class_id[i + 1], res.json()["message"])
         time.sleep(random.random())
